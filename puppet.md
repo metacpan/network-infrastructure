@@ -3,11 +3,11 @@
 
 ### Install puppet
 ```
-sudo apt-get install git
+sudo apt-get install -y git
 wget http://apt.puppetlabs.com/puppetlabs-release-wheezy.deb
 sudo dpkg -i puppetlabs-release-wheezy.deb
 sudo apt-get update
-sudo apt-get install puppet
+sudo apt-get install -y puppet
 ```
 
 ### Clone repo
