@@ -40,3 +40,9 @@ mkdir /mnt/lv-elasticsearch
 /dev/mapper/vg--hdds-elasticsearch    /mnt/lv-elasticsearch ext4 defaults 0 2
 /dev/mapper/vg--hdds-metacpan--tmp    /mnt/lv-metacpan--tmp   ext4 defaults 0 2
 ```
+
+#### You probably want to sync from an existing machine
+```
+cd /mnt/lv-cpan
+rsync -a -e "ssh -p 2202" leo@bm-n2.metacpan.org:/var/cpan/ ./
+```
