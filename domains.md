@@ -21,7 +21,7 @@ http://search.cpan.org/ && http://cpansearch.perl.org/ - redirects
 
 ## Fastly - CDN
 
-http://search.mcpan.org/ && http://sco.metacpan.org/ - redirects
+http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redirects
 
  * origin: bm-mc-01
 
