@@ -1,6 +1,6 @@
-# Domains and their conifguration / origin(s)
+# Domains and their configuration / origin(s)
 
-This documents the metacpan domains and subdomains, and where
+This documents the MetaCPAN domains and subdomains, and where
 they are currently hosted.
 
 ## Non-fastly:
@@ -11,7 +11,7 @@ http://vmbox.metacpan.org/ - Virtual Machine boxes for Development
 
 http(s)://api.metacpan.org/ - v0 of the API
 
-  * Can not use fastly as this version support GET + BODY!
+  * Can not use fastly as this version supports GET + BODY!
   * Currently on old BM box
 
 http://search.cpan.org/ && http://cpansearch.perl.org/ - redirects
