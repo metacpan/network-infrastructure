@@ -7,7 +7,7 @@ they are currently hosted.
 
 http://vmbox.metacpan.org/ - Virtual Machine boxes for Development
 
-  * bm-mc-02 - files too large to go via fastly really
+  * bm-mc-01 - files too large to go via fastly really
 
 http(s)://api.metacpan.org/ - v0 of the API
 
