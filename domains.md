@@ -17,7 +17,7 @@ http(s)://api.metacpan.org/ - v0 of the API
 http://search.cpan.org/ && http://cpansearch.perl.org/ - redirects
 
   * Can not use fastly as we don't actually own these, just fake it
-  * Currently on old BM box
+  * Instructions updated to use bm-mc-01
 
 ## Fastly - CDN
 
