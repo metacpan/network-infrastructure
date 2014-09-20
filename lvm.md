@@ -4,7 +4,7 @@ Give root reasonable disk space, 100G was default on ByteMark server
 
 ### Creating logical volumes (`vgdisplay` to see volume groups)
 ```
-lvcreate --name cpan --size 45G vg-hdds
+lvcreate --name cpan --size 55G vg-hdds
 lvcreate --name elasticsearch --size 83G vg-hdds
 lvcreate --name metacpan-tmp --size 158G vg-hdds
 ```
@@ -46,3 +46,17 @@ mkdir /mnt/lv-elasticsearch
 cd /mnt/lv-cpan
 rsync -a -e "ssh -p 2202" leo@bm-n2.metacpan.org:/var/cpan/ ./
 ```
+
+#### Extending space
+
+To increase the space available on one of them, change the following example, which adds an additional 100 MB for the CPAN mirror. There's no need to unmount anything.
+
+```
+# Show current usage (and what is free, see note below)
+pvscan
+# Grow the LVM volume
+lvextend -L +100M /dev/mapper/vg--hdds-cpan
+# Extend the filesystem to the fit the new LV size
+resize2fs /dev/mapper/vg--hdds-cpan
+```
+
