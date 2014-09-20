@@ -12,7 +12,7 @@ http://vmbox.metacpan.org/ - Virtual Machine boxes for Development
 http(s)://api.metacpan.org/ - v0 of the API
 
   * Can not use fastly as this version supports GET + BODY!
-  * Currently on old BM box
+  * **Currently on old BM box**
 
 http://search.cpan.org/ && http://cpansearch.perl.org/ - redirects
 
@@ -27,7 +27,7 @@ http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redire
 
 http(s)://metacpan.org/
 
- * origin: old BM box
+ * **origin: old BM box**
 
 http(s)://cpan.metacpan.org/
 
