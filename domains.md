@@ -31,7 +31,7 @@ http(s)://metacpan.org/
 
 http(s)://cpan.metacpan.org/
 
- * origin: bm-mc-02
+ * origin: bm-mc-02 & bm-mc-02 - load balanced with health check
 
 http://explorer.metacpan.org/
 
