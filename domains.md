@@ -23,6 +23,8 @@ http://explorer.metacpan.org/
 
 http(s)://www.metacpan.org/ - redirect to https://metacpan.org/
 
+ * **Currently on old BM box**
+
 ## Non-fastly:
 
 http://vmbox.metacpan.org/ - Virtual Machine boxes for Development
