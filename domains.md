@@ -11,7 +11,7 @@ http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redire
 
 http(s)://metacpan.org/
 
- * **origin: old BM box**
+ * origin: bm-mc-01
 
 http(s)://cpan.metacpan.org/
 
