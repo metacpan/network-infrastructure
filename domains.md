@@ -34,7 +34,7 @@ http://vmbox.metacpan.org/ - Virtual Machine boxes for Development
 http(s)://api.metacpan.org/ - v0 of the API
 
   * Can not use fastly as this version supports GET + BODY!
-  * **Currently on old BM box**
+  * **Currently on old BM box** - test new server: http://api.bm-mc-02.metacpan.org/
 
 http://search.cpan.org/ && http://cpansearch.perl.org/ - redirects
 
