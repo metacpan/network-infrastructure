@@ -11,7 +11,7 @@ http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redire
 
 http(s)://metacpan.org/
 
- * origin: bm-mc-01
+ * origin: bm-mc-01 - fails over to bm-mc-02
 
 http(s)://cpan.metacpan.org/
 
