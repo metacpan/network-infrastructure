@@ -9,11 +9,11 @@ http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redire
 
  * origin: bm-mc-01
 
-http(s)://metacpan.org/
+https://metacpan.org/  ( fastly also take http and converts to httpS )
 
  * origin: bm-mc-01 - fails over to bm-mc-02
 
-http(s)://cpan.metacpan.org/
+http://cpan.metacpan.org/ && https://cpan.metacpan.org/
 
  * origin: bm-mc-01 & bm-mc-02 - load balanced with health check
 
@@ -21,7 +21,7 @@ http://explorer.metacpan.org/
 
  * origin: bm-mc-01
 
-http(s)://www.metacpan.org/ - redirect to https://metacpan.org/
+http://www.metacpan.org/, https://www.metacpan.org/ - redirect to https://metacpan.org/
 
  * Entirly on fastly, no origin
 
