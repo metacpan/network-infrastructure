@@ -23,7 +23,7 @@ http://explorer.metacpan.org/
 
 http(s)://www.metacpan.org/ - redirect to https://metacpan.org/
 
- * **Currently on old BM box**
+ * Entirly on fastly, no origin
 
 ## Non-fastly:
 
