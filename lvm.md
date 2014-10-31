@@ -60,3 +60,29 @@ lvextend -L +100M /dev/mapper/vg--hdds-cpan
 resize2fs /dev/mapper/vg--hdds-cpan
 ```
 
+### What to do if we get a box that doesn't have lvm, or a partition...
+
+```
+apt-get install lvm2 dmsetup mdadm reiserfsprogs xfsprogs
+```
+(might get asked about 'arrays' - Leo tried to set to 'all')
+
+Disk partitioning...
+```
+cfdisk /dev/sda
+```
+
+* Add new `logical` partition
+* Set type to `8E` - Linux LVM
+* Write
+
+```
+pvcreate /dev/sdb5
+```
+
+http://www.howtoforge.com/linux_lvm
+
+
+
+
+
