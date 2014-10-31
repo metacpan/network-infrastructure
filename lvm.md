@@ -62,6 +62,8 @@ resize2fs /dev/mapper/vg--hdds-cpan
 
 ### What to do if we get a box that doesn't have lvm, or a partition...
 
+From: http://www.howtoforge.com/linux_lvm
+
 ```
 apt-get install lvm2 dmsetup mdadm reiserfsprogs xfsprogs
 ```
@@ -74,13 +76,17 @@ cfdisk /dev/sda
 
 * Add new `logical` partition
 * Set type to `8E` - Linux LVM
-* Write
+* Write (note the `/dev/sdbXXX`)
 
 ```
-pvcreate /dev/sdb5
+pvcreate /dev/sdbXXX
 ```
 
-http://www.howtoforge.com/linux_lvm
+```
+vgcreate vg--hdds /dev/sda5
+```
+
+Then follow instructions from above
 
 
 
