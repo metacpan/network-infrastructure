@@ -24,3 +24,9 @@ git clone https://github.com/CPAN-API/metacpan-puppet.git ./puppet
 cd /etc/puppet
 puppet apply --verbose --show_diff --certname=bm-mc-01 manifests/site.pp
 ```
+
+### For production machines (as a metacpan admin) see:
+
+https://github.com/CPAN-API/metacpan-conf-private
+
+
