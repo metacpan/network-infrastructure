@@ -21,8 +21,7 @@ git clone https://github.com/CPAN-API/metacpan-puppet.git ./puppet
 
 ### Run puppet (note certname here)
 ```
-cd /etc/puppet
-puppet apply --verbose --show_diff --certname=bm-mc-01 manifests/site.pp
+sudo sh /etc/puppet/run.sh
 ```
 
 ### For production machines (as a metacpan admin) see:
