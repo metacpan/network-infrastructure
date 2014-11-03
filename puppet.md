@@ -4,12 +4,13 @@
 ### Install puppet
 #### (need gem deep_merge for hiera_hash merging)
 ```
-sudo apt-get install -y git
+sudo su -
+apt-get install -y git
 wget http://apt.puppetlabs.com/puppetlabs-release-wheezy.deb
-sudo dpkg -i puppetlabs-release-wheezy.deb
-sudo apt-get update
-sudo apt-get install -y puppet
-sudo gem install deep_merge
+dpkg -i puppetlabs-release-wheezy.deb
+apt-get update
+apt-get install -y puppet
+gem install deep_merge
 ```
 
 ### Clone repo
