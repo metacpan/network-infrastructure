@@ -83,7 +83,7 @@ pvcreate /dev/sdbXXX
 ```
 
 ```
-vgcreate vg--hdds /dev/sda5
+vgcreate vg-hdds /dev/sda5
 ```
 
 Then follow instructions from above
