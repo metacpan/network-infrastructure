@@ -20,7 +20,7 @@ mv puppet dpkg.puppet
 git clone https://github.com/CPAN-API/metacpan-puppet.git ./puppet
 ```
 
-### Run puppet (note certname here)
+### Run puppet
 ```
 sudo sh /etc/puppet/run.sh
 ```
