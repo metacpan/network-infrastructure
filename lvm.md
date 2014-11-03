@@ -76,10 +76,10 @@ cfdisk /dev/sda
 
 * Add new `logical` partition
 * Set type to `8E` - Linux LVM
-* Write (note the `/dev/sdbXXX`)
+* Write (note the `/dev/sdaXXX`)
 
 ```
-pvcreate /dev/sdbXXX
+pvcreate /dev/sdaXXX
 ```
 
 ```
