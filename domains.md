@@ -38,5 +38,5 @@ http(s)://api.metacpan.org/ - v0 of the API
 
 http://search.cpan.org/ && http://cpansearch.perl.org/ - redirects
 
-  * Can not use fastly as we don't actually own these, just fake it
-  * Instructions updated to use bm-mc-01
+  * Can not use fastly as we don't actually own these domains, just fake it
+  * Instructions updated to use bm-mc-01, but all our servers should be configured for it
