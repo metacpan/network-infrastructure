@@ -52,8 +52,12 @@ rsync -a -e ssh leo@bm-mc-01.metacpan.org:/mnt/lv-cpan/ ./
 To increase the space available on one of them, change the following example, which adds an additional 100 MB for the CPAN mirror. There's no need to unmount anything.
 
 ```
-# Show current usage (and what is free, see note below)
+# Show current usage on virtual disk groups
 pvscan
+# Find the mapping you want
+df
+  or
+ls /dev/mapper/
 # Grow the LVM volume
 lvextend -L +100M /dev/mapper/vg--hdds-cpan
 # Extend the filesystem to the fit the new LV size
