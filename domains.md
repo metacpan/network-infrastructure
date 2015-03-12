@@ -21,6 +21,10 @@ http://explorer.metacpan.org/
 
  * origin: bm-mc-01
 
+http://gh.metacpan.org/
+
+ * origin: lw-mc-01
+
 http://www.metacpan.org/, https://www.metacpan.org/ - redirect to https://metacpan.org/
 
  * Entirly on fastly, no origin
