@@ -1,6 +1,6 @@
 # MetaCPAN NOC Servers
 
-### Bytemark (currently live env, will be old v0 of API)
+### Bytemark (currently live env, will be old v0 of API, then backup and development env)
 
 Name | RAM | CPU | Disk
 -----|-----|-----|-----
@@ -17,4 +17,4 @@ lw-mc-02 | 32GB | 16 core Intel(R) Xeon(R) CPU E5520  @ 2.27GHz | 833 GB
 lw-mc-03 | 32GB | 16 core Intel(R) Xeon(R) CPU E5520  @ 2.27GHz | 833 GB
 
 See [domains](https://github.com/CPAN-API/network-infrastructure/blob/master/domains.md) for what
-is hosted where and how.
+is hosted where.
