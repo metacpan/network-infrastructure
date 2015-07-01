@@ -15,7 +15,7 @@ https://metacpan.org/  ( fastly also take http and converts to httpS )
 
 http://cpan.metacpan.org/ && https://cpan.metacpan.org/
 
- * origin: bm-mc-01 & bm-mc-02 - load balanced with health check
+ * origin: lw-mc-02, 95% & bm-mc-02, 5% (version 20 of fastly config was bm-mc-01 and bm-mc-02)
 
 http://explorer.metacpan.org/
 
