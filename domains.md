@@ -19,16 +19,15 @@ http://cpan.metacpan.org/ && https://cpan.metacpan.org/
 
 http://explorer.metacpan.org/
 
+ * origin: bm-mc-01
+
+https://v1.metacpan.org/
+
  * origin: lw-mc-03
 
-http://gh.metacpan.org/
+http://fastapi.metacpan.org/
 
- * origin: lw-mc-01
-
-http://gh.metacpan.org/
-
- * origin: lw-mc-01
-
+ * origin: lw-mc-03
 
 http://www.metacpan.org/, https://www.metacpan.org/ - redirect to https://metacpan.org/
 
