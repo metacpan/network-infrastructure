@@ -11,7 +11,7 @@ http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redire
 
 https://metacpan.org/  ( fastly also take http and converts to httpS )
 
- * origin: bm-mc-01 - fails over to bm-mc-02
+ * origin: lw-mc-03 - fails over to lw-mc-02
 
 http://cpan.metacpan.org/ && https://cpan.metacpan.org/
 
@@ -19,11 +19,11 @@ http://cpan.metacpan.org/ && https://cpan.metacpan.org/
 
 http://explorer.metacpan.org/
 
- * origin: bm-mc-01
+ * origin: lw-mc-01
 
 https://v1.metacpan.org/
 
- * origin: lw-mc-03
+ * Entirly on fastly, no origin - it just redirects
 
 http://fastapi.metacpan.org/
 
