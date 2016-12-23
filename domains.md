@@ -13,9 +13,9 @@ https://metacpan.org/  ( fastly also take http and converts to httpS )
 
  * origin: lw-mc-03 - fails over to lw-mc-02
 
-http://cpan.metacpan.org/ && https://cpan.metacpan.org/
+http(s)://cpan.metacpan.org/ && http(s)://backpan.metacpan.org/
 
- * origin: lw-mc-02, 95% & bm-mc-02, 5% (version 20 of fastly config was bm-mc-01 and bm-mc-02)
+ * origin: lw-mc-02:80, 95% & bm-mc-01:80, 5% (version 20 of fastly config was bm-mc-01 and bm-mc-02)
 
 http://explorer.metacpan.org/
 
