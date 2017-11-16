@@ -41,8 +41,7 @@ http://vmbox.metacpan.org/ - Virtual Machine boxes for Development
 
 http(s)://api.metacpan.org/ - v0 of the API
 
-  * Can not use fastly as this version supports GET + BODY!
-  * bm-mc-01
+  * lw-mc-03 - running the shim
 
 http://search.cpan.org/ && http://cpansearch.perl.org/ - redirects
 
