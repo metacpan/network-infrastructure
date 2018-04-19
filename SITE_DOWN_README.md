@@ -2,7 +2,7 @@
 
 ## Notes:
 
-- LW = Liquid web data center ( primary for Elasticsearch and there for the API )
+- LW = Liquid web data center ( primary for Elasticsearch and therefore the API )
 - BM = Bytemark data center 
 
 ### Some basic monitoring
@@ -22,7 +22,7 @@ Also see #metacpan on irc.perl.org as https://www.panopta.com/ does further moni
 
 ### Unreachable?
 
-- If none of the boxes is reachable we need to consider actioning our DR plan...
+- If none of the LW boxes is reachable we need to consider actioning our DR plan...
 
 ### Disaster recovery Plan (option of LAST resort)
 
@@ -50,7 +50,7 @@ Restore works like a ES recovery... so you can monitor it as:
  curl localhost:9200/_cat/recovery?v
  ```
 
-This takes about 40 mins, after the 1st shard you can see progress in kopf, but not before (so use the `recovery` link above).
+This takes about an hour before it's actually accessible and longer for it to be green, after the 1st shard you can see progress in kopf, but not before (so use the `recovery` link above).
 
 #### Setup the alias to point to the recovered index
 
