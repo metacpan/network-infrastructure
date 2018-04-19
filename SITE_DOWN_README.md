@@ -24,7 +24,7 @@ Also see #metacpan on irc.perl.org as https://www.panopta.com/ does further moni
 
 - If none of the boxes is reachable we need to consider actioning our DR plan...
 
-### DR Plan (to be filled out more!)
+### Disaster recovery Plan (option of LAST resort)
 
 - Restore ES snapshot (snapshots taken daily)
 
