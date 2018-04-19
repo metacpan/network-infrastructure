@@ -2,8 +2,8 @@
 
 ## Notes:
 
-- BM = Bytemark data center
-- LW = Liquid web data center
+- LW = Liquid web data center ( primary for Elasticsearch and there for the API )
+- BM = Bytemark data center 
 
 ### Some basic monitoring
 
