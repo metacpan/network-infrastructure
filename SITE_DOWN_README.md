@@ -26,7 +26,6 @@ Also see #metacpan on irc.perl.org as https://www.panopta.com/ does further moni
 
 ### DR Plan (to be filled out more!)
 
-- Fastly - switch fastapi.mc.org to use the BM boxes
 - Restore ES snapshot (snapshots taken daily)
 
 ##### Find the snapshot on any BM machine
@@ -39,7 +38,7 @@ Also see #metacpan on irc.perl.org as https://www.panopta.com/ does further moni
 ./bin/run bin/metacpan snapshot --setup
 ```
 
-##### initiate restores
+##### initiate restores (change date to in lines below)
 ```sh
 ./bin/run bin/metacpan snapshot --restore --snap-name user_YYYY-MM-DD
 ./bin/run bin/metacpan snapshot --restore --snap-name cpan_YYYY-MM-DD
@@ -70,14 +69,19 @@ curl -XPOST 'http://localhost:9200/_aliases' -d '
         { "add" : { "index" : "restored_cpan_v1_01", "alias" : "cpan" } }
     ]
 }'
-
-
-
 ```
 
+#### Switch fastapi.mc.org to use the BM boxes  (as soon as the above is done)
 
+- https://manage.fastly.com/
+- select the `fastapi.metacpan.org` service (click on the `active version`)
+- select `clone` from the `options` menu
+- choose `hosts` and go into each host and update the name and IP from a LW box to a BM box, all other options can be left as they are (click on `update` at bottom of each host page)
+- click `activate` button to deploy
+- monitor traffic in the `/var/log/nginx/metacpan-api/access.log` on the BM servers
 
+Might as well get fastly switched over as soon as the ES recovery is started
 
-- Add aliases for ES snapshot
+#### Web front end (nothing to do)
 
-The metacpan-web should fail over automatically, so it is only the fastapi we need to worry about here
+The metacpan-web is already run across LW and BM with health checks, it will fail over automatically, so it is only the fastapi we need to worry about here.
