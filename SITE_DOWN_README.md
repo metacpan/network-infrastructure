@@ -62,10 +62,12 @@ curl -XPOST 'http://localhost:9200/_aliases' -d '
         { "add" : { "index" : "restored_user", "alias" : "user" } }
     ]
 }'
+```
+```
 curl -XPOST 'http://localhost:9200/_aliases' -d '
 {
     "actions" : [
-        { "add" : { "index" : "restored_cpan_v1_01", "alias" : "cpan_v1_01" } }
+        { "add" : { "index" : "restored_cpan_v1_01", "alias" : "cpan" } }
     ]
 }'
 
