@@ -1,5 +1,10 @@
 # What to do if the site is down.
 
+## Notes:
+
+- BM = Bytemark data center
+- LW = Liquid web data center
+
 ### Some basic monitoring
 
 http://munin.metacpan.org/ (hosted on lw-mc-01!)
@@ -23,6 +28,29 @@ Also see #metacpan on irc.perl.org as https://www.panopta.com/ does further moni
 
 - Fastly - switch fastapi.mc.org to use the BM boxes
 - Restore ES snapshot (snapshots taken daily)
+
+##### Find the snapshot on any BM machine
+```sh
+./bin/run bin/metacpan snapshot --list
+```
+
+##### If error `"type":"repository_missing_exception`, set up the snapshot end point with
+```sh
+./bin/run bin/metacpan snapshot --setup
+```
+
+##### restore
+```sh
+./bin/run bin/metacpan snapshot --restore --snap-name user_2018-04-19
+./bin/run bin/metacpan snapshot --restore --snap-name cpan_2018-04-19
+```
+
+#### Monitor restore
+Restore works like a ES recovery... so you can monitor it as:
+```sh
+ curl localhost:9200/_cat/recover?v
+ ```
+
 - Add aliases for ES snapshot
 
 The metacpan-web should fail over automatically, so it is only the fastapi we need to worry about here
