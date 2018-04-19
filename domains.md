@@ -11,7 +11,7 @@ http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redire
 
 https://metacpan.org/  ( fastly also take http and converts to httpS )
 
- * origin: lw-mc-03 - fails over to lw-mc-02
+ * load balanced + health checks: lw-mc-01, lw-mc-02, bm-mc-01, bm-mc-02
 
 http(s)://cpan.metacpan.org/ && http(s)://backpan.metacpan.org/
 
@@ -27,7 +27,7 @@ https://v1.metacpan.org/
 
 http://fastapi.metacpan.org/
 
- * origin: lw-mc-03
+ * load balanced + health checks: lw-mc-01, lw-mc-02, lw-mc-03  (as need to talk to same ES always)
 
 http://www.metacpan.org/, https://www.metacpan.org/ - redirect to https://metacpan.org/
 
