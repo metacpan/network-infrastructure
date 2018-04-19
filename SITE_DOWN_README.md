@@ -39,17 +39,42 @@ Also see #metacpan on irc.perl.org as https://www.panopta.com/ does further moni
 ./bin/run bin/metacpan snapshot --setup
 ```
 
-##### restore
+##### initiate restores
 ```sh
-./bin/run bin/metacpan snapshot --restore --snap-name user_2018-04-19
-./bin/run bin/metacpan snapshot --restore --snap-name cpan_2018-04-19
+./bin/run bin/metacpan snapshot --restore --snap-name user_YYYY-MM-DD
+./bin/run bin/metacpan snapshot --restore --snap-name cpan_YYYY-MM-DD
 ```
 
 #### Monitor restore
 Restore works like a ES recovery... so you can monitor it as:
 ```sh
- curl localhost:9200/_cat/recover?v
+ curl localhost:9200/_cat/recovery?v
  ```
+
+This takes about 40 mins, after the 1st shard you can see progress in kopf, but not before (so use the `recovery` link above).
+
+#### Setup the alias to point to the recovered index
+
+```sh
+curl -XPOST 'http://localhost:9200/_aliases' -d '
+{
+    "actions" : [
+        { "add" : { "index" : "restored_user", "alias" : "user" } }
+    ]
+}'
+curl -XPOST 'http://localhost:9200/_aliases' -d '
+{
+    "actions" : [
+        { "add" : { "index" : "restored_cpan_v1_01", "alias" : "cpan_v1_01" } }
+    ]
+}'
+
+
+
+```
+
+
+
 
 - Add aliases for ES snapshot
 
