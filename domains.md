@@ -3,15 +3,28 @@
 This documents the MetaCPAN domains and subdomains, and where
 they are currently hosted.
 
+## Notes:
+
+- LW = Liquid web data center ( primary for Elasticsearch and therefore the API )
+- BM = Bytemark data center 
+
 ## Fastly - CDN
 
-http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redirects
-
- * origin: lw-mc-02:80 and balanced with lw-mc-03:80
+#### Primary sites
 
 https://metacpan.org/  ( fastly also take http and converts to httpS )
 
  * load balanced + health checks: lw-mc-01, lw-mc-02, bm-mc-01, bm-mc-02
+
+http://fastapi.metacpan.org/
+
+ * load balanced + health checks: lw-mc-01, lw-mc-02, lw-mc-03  (as need to talk to same ES always)
+
+#### Other sites
+
+http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redirects
+
+ * origin: lw-mc-02:80 and balanced with lw-mc-03:80
 
 http(s)://cpan.metacpan.org/ && http(s)://backpan.metacpan.org/
 
@@ -25,9 +38,6 @@ https://v1.metacpan.org/
 
  * Entirly on fastly, no origin - it just redirects
 
-http://fastapi.metacpan.org/
-
- * load balanced + health checks: lw-mc-01, lw-mc-02, lw-mc-03  (as need to talk to same ES always)
 
 http://www.metacpan.org/, https://www.metacpan.org/ - redirect to https://metacpan.org/
 
