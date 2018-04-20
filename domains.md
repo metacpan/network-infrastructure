@@ -18,7 +18,7 @@ https://metacpan.org/  ( fastly also take http and converts to httpS )
 
 http://fastapi.metacpan.org/
 
- * load balanced + health checks: lw-mc-01, lw-mc-02, lw-mc-03  (as need to talk to same ES always)
+ * load balanced + health checks: lw-mc-01, lw-mc-02, lw-mc-03  (as need to talk to same ElasticSearch always)
 
 #### Other sites
 
