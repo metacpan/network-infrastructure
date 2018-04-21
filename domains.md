@@ -24,7 +24,7 @@ http://fastapi.metacpan.org/
 
 http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redirects
 
- * origin: lw-mc-02:80 and balanced with lw-mc-03:80
+ * origin: bm-mc-03:80
 
 http(s)://cpan.metacpan.org/ && http(s)://backpan.metacpan.org/
 
