@@ -15,8 +15,12 @@ Also see #metacpan on irc.perl.org as https://www.panopta.com/ does further moni
 
 * `ssh lw-mc-01.metacpan.org`  ( or lw-mc-02 / lw-mc-03 )
 * Is elasticsearch ok? `curl localhost:9200/_cat/health`  - should say `green` (if not see [elasticsearch.md](elasticsearch.md) in this repo for further debugging)
-* Check the following are running: `/etc/init.d/nginx`, `/etc/init.d/elasticsearch-es-01`, `/etc/init.d/starman_metacpan-web`, `/etc/init.d/starman_metacpan-api`
-* [domains.md](domains.md) what sites run on which boxes
+* Check the following are running:
+  * `sudo systemctl status starman_metacpan-api`
+  * `sudo systemctl status starman_metacpan-web`
+  * `sudo systemctl status elasticsearch-es-01`
+  * `sudo systemctl status nginx`
+* [domains.md](domains.md) maps what sites run on which boxes
 * Check the relevant nginx logs (`/var/log/nginx/SITE/`) and the starman logs (`/var/log/starman/SITE/`)
 * Check Fastly (our CDN) status: https://status.fastly.com/  (in the unlikely event they have an issue, they can be reached in #fastly on irc.freenode.net or `support@fastly.com`)
 
@@ -82,7 +86,7 @@ curl -XPOST 'http://localhost:9200/_aliases' -d '
 * click `activate` button to deploy
 * monitor traffic in the `/var/log/nginx/metacpan-api/access.log` on the BM servers
 
-Might as well get fastly switched over as soon as the ES recovery is started
+Might as well get Fastly switched over as soon as the ES recovery is started
 
 #### Web front end (nothing to do)
 
