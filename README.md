@@ -5,9 +5,10 @@ Notes and information about the MetaCPAN networks and infrastructure
 
 This repo is to document and discuss the MetaCPAN network infrastrcture
 
+ * [Disaster Recovery Checklist](SITE_DOWN_README.md)
  * [Domains and where the origin(s) are](domains.md)
 
-## Setting up a box 
+## Setting up a box
 
  * [lvm disk configuration](lvm.md)
  * [Setting up puppet on a new box](puppet.md)
