@@ -11,9 +11,9 @@ http://munin.metacpan.org/ (hosted on lw-mc-01!)
 
 Also see #metacpan on irc.perl.org as https://www.panopta.com/ does further monitoring / alerting for us and updates that channel.
 
-### Can we reach the liquid web servers:
+### Can we reach the bytemark web servers (if they are the master Data Center, otherwise Liquid web on: lw-mc-01 lw-mc-02 lw-mc-03):
 
-* `ssh lw-mc-01.metacpan.org`  ( or lw-mc-02 / lw-mc-03 )
+* `ssh bm-mc-01.metacpan.org`  ( or bm-mc-02 / bm-mc-04 )
 * Is elasticsearch ok? `curl localhost:9200/_cat/health`  - should say `green` (if not see [elasticsearch.md](elasticsearch.md) in this repo for further debugging)
 * Check the following are running:
   * `sudo systemctl status starman_metacpan-api`
@@ -26,7 +26,7 @@ Also see #metacpan on irc.perl.org as https://www.panopta.com/ does further moni
 
 ### Unreachable?
 
-* If none of the LW boxes is reachable we need to consider actioning our disaster recovery plan.
+* If none of the bytemark boxes is reachable we need to consider actioning our disaster recovery plan.
 
 ### Disaster recovery Plan (option of LAST resort)
 
@@ -57,25 +57,6 @@ Restore works like a ES recovery... so you can monitor it as:
 This takes about an hour before it's actually accessible and longer for it to
 be green, after the 1st shard you can see progress in kopf, but not before (so
 use the `recovery` link above).
-
-#### Setup the alias to point to the recovered index
-
-```sh
-curl -XPOST 'http://localhost:9200/_aliases' -d '
-{
-    "actions" : [
-        { "add" : { "index" : "restored_user", "alias" : "user" } }
-    ]
-}'
-```
-```
-curl -XPOST 'http://localhost:9200/_aliases' -d '
-{
-    "actions" : [
-        { "add" : { "index" : "restored_cpan_v1_01", "alias" : "cpan" } }
-    ]
-}'
-```
 
 #### Switch fastapi.mc.org to use the BM boxes  (as soon as the above is done)
 
