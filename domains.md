@@ -24,7 +24,7 @@ http://fastapi.metacpan.org/
 
 http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redirects
 
- * origin: bm-mc-03:80
+ * load balanced + health checks: bm-mc-01, bm-mc-02, bm-mc-04
 
 http(s)://cpan.metacpan.org/ && http(s)://backpan.metacpan.org/
 
@@ -38,22 +38,15 @@ https://v1.metacpan.org/
 
  * Entirly on fastly, no origin - it just redirects
 
-
 http://www.metacpan.org/, https://www.metacpan.org/ - redirect to https://metacpan.org/
 
  * Entirly on fastly, no origin
-
-## Non-fastly:
-
-http://vmbox.metacpan.org/ - Virtual Machine boxes for Development
-
-  * bm-mc-01 - files too large to go via fastly really
 
 http(s)://api.metacpan.org/ - v0 of the API
 
   * lw-mc-03 - running the shim
 
-http://search.cpan.org/ && http://cpansearch.perl.org/ - redirects
+http://munin.metacpan.org
 
-  * Can not use fastly as we don't actually own these domains, just fake it
-  * Instructions updated to use bm-mc-01, but all our servers should be configured for it
+ * lw-mc-01
+
