@@ -44,7 +44,7 @@ http://www.metacpan.org/, https://www.metacpan.org/ - redirect to https://metacp
 
 http(s)://api.metacpan.org/ - v0 of the API
 
-  * lw-mc-03 - running the shim
+  * bm-mc-01 - running the shim
 
 http://munin.metacpan.org
 
