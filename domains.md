@@ -22,13 +22,13 @@ http://fastapi.metacpan.org/
 
 #### Other sites
 
-http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redirects
+http://search.cpan.org/, http://search.mcpan.org/, http://mcpan.org/ && http://sco.metacpan.org/ - redirects
 
- * load balanced + health checks: bm-mc-01, bm-mc-02, bm-mc-04
+ * load balanced (heavily to LW) + health checks: lw-mc-01, lw-mc-02, lw-mc-03, bm-mc-02, bm-mc-04
 
 http(s)://cpan.metacpan.org/ && http(s)://backpan.metacpan.org/
 
- * origin: lw-mc-02:80, 95% & bm-mc-02:80, 5%
+ * origin: lw-mc-01:80 - 45%, lw-mc-02:80 - 45%, bm-mc-02:80 5% & bm-mc-04:80 5%
 
 http://explorer.metacpan.org/
 
