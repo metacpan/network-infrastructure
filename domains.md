@@ -49,4 +49,8 @@ http(s)://api.metacpan.org/ - v0 of the API
 http://munin.metacpan.org
 
  * lw-mc-01
+ 
+ http://gh.metacpan.org
+ 
+ * lw-mc-02
 
