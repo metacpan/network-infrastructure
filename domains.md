@@ -53,4 +53,8 @@ http://munin.metacpan.org
  http://gh.metacpan.org
  
  * lw-mc-02
+ 
+ http://grep.metacpan.org
+ 
+ * bm-mc-02
 
