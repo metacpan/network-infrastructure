@@ -10,7 +10,6 @@ module.exports = {
     editLinks: true,
     repo: 'metacpan/network-infrastructure',
       nav: [
-        { text: "Home", link: "/" },
         { text: "Docker", link: "/docker/" },
         { text: "Servers", link: "/servers/" },
         { text: "Playbooks", link: "/playbooks/" }

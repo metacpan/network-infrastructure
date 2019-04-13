@@ -58,3 +58,11 @@ This doesn't solve it as such - but cleans up files that haven't been modified/e
 ## Setting up logical volumes
 
 See our [LVM documentation](./lvm.md).
+
+## Setting up a box
+
+ * [lvm disk configuration](lvm.md)
+
+ * [Setting up puppet on a new box](./puppet.md)
+
+ * [Installing SSL certs on a new box](https://github.com/CPAN-API/metacpan-conf-private) * external

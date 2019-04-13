@@ -1,7 +1,7 @@
 # Puppet
 
 
-### Install puppet
+## Install puppet
 #### (need gem deep_merge for hiera_hash merging)
 ```
 sudo su -
@@ -13,19 +13,19 @@ apt-get install -y puppet
 gem install deep_merge
 ```
 
-### Clone repo
+## Clone repo
 ```
 cd /etc
 mv puppet dpkg.puppet
 git clone https://github.com/CPAN-API/metacpan-puppet.git ./puppet
 ```
 
-### Run puppet
+## Run puppet
 ```
 sudo sh /etc/puppet/run.sh
 ```
 
-### For production machines (as a metacpan admin) see:
+## For production machines (as a metacpan admin) see:
 
 https://github.com/CPAN-API/metacpan-conf-private
 
