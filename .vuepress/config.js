@@ -6,6 +6,9 @@ module.exports = {
       sidebarDepth: 5,
       displayAllHeaders: true,
       lastUpdated: "Last Updated",
+          // defaults to false, set to true to enable
+    editLinks: true,
+    repo: 'metacpan/network-infrastructure',
       nav: [
         { text: "Home", link: "/" },
         { text: "Docker", link: "/docker/" },
