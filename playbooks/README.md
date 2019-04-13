@@ -1,5 +1,9 @@
 # Play Books
 
+## Site down
+
+Read our [Site down documentation](./site_down.md) 
+
 ## Elastic Search
 
 ### Quick check of status
