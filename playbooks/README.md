@@ -4,6 +4,15 @@
 
 Read our [Site down documentation](./site_down.md) 
 
+## Monitoring
+
+- [http://munin.metacpan.org/](http://munin.metacpan.org/) (very basic but good quick glance)
+
+- [https://github.com/metacpan/metacpan-monitoring](https://github.com/metacpan/metacpan-monitoring) (which is in hourly cron and sends emails)
+
+- [https://www.panopta.com/](https://www.panopta.com/) (they give us a free account and we run their agent on our servers)
+
+
 ## Elastic Search
 
 ### Quick check of status
