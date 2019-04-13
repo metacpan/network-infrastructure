@@ -54,3 +54,7 @@ Do **NOT** allocate all the unused space to logical volumes. We need some free s
 find /var/tmp/metacpan/source/ -maxdepth 2 -type d -mtime +215 | head -5000 | xargs sudo rm -rf
 `````
 This doesn't solve it as such - but cleans up files that haven't been modified/extracted in a long while
+
+## Setting up logical volumes
+
+See our [LVM documentation](./lvm.md).
