@@ -2,14 +2,14 @@
 
 #### Notes:
 
-* LW = Liquid web data center ( primary for Elasticsearch and therefore the API )
-* BM = Bytemark data center
+* LW = Liquid web data center 
+* BM = Bytemark data center (2019-04-14: current primary for Elasticsearch and therefore the API )
 
 ## Some basic monitoring
 
-http://munin.metacpan.org/ (hosted on lw-mc-01!)
+[http://munin.metacpan.org/](http://munin.metacpan.org/) (hosted on lw-mc-01!)
 
-Also see #metacpan on irc.perl.org as https://www.panopta.com/ does further monitoring / alerting for us and updates that channel.
+Also see #metacpan on irc.perl.org as [https://www.panopta.com/](https://www.panopta.com/) does further monitoring / alerting for us and updates that channel.
 
 ## Bytemark
 
@@ -18,23 +18,25 @@ Can we reach the bytemark web servers (if they are the master Data Center, other
 * `ssh bm-mc-01.metacpan.org`  ( or bm-mc-02 / bm-mc-04 )
 * Is elasticsearch ok? `curl localhost:9200/_cat/health`  - should say `green` (if not see [elasticsearch.md](elasticsearch.md) in this repo for further debugging)
 * Check the following are running:
-  * `sudo systemctl status starman_metacpan-api`
-  * `sudo systemctl status starman_metacpan-web`
-  * `sudo systemctl status elasticsearch-es-01`
-  * `sudo systemctl status nginx`
-* [domains.md](domains.md) maps what sites run on which boxes
+ ```sh
+  sudo systemctl status starman_metacpan-api
+  sudo systemctl status starman_metacpan-web
+  sudo systemctl status elasticsearch-es-01
+  sudo systemctl status nginx
+  ```
+* [Sites](../sites/) maps what sites run on which boxes
 * Check the relevant nginx logs (`/var/log/nginx/SITE/`) and the starman logs (`/var/log/starman/SITE/`)
-* Check Fastly (our CDN) status: https://status.fastly.com/  (in the unlikely event they have an issue, they can be reached in #fastly on irc.freenode.net or `support@fastly.com`)
+* Check Fastly (our CDN) status: [https://status.fastly.com/](https://status.fastly.com/)  (in the unlikely event they have an issue, they can be reached in `#fastly on irc.freenode.net` or best on `support@fastly.com`)
 
 ### Unreachable?
 
-* If none of the bytemark boxes is reachable we need to consider auctioning our disaster recovery plan.
+* If none of the production boxes is reachable we need to consider auctioning our disaster recovery plan.
 
 ## Disaster recovery Plan (option of LAST resort)
 
 * Restore ES snapshot (snapshots taken daily)
 
-### Find the snapshot on any BM machine
+### Find the snapshot on any the non-main production cluster machine
 ```sh
 ./bin/run bin/metacpan snapshot --list
 ```
@@ -60,9 +62,9 @@ This takes about an hour before it's actually accessible and longer for it to
 be green, after the 1st shard you can see progress in kopf, but not before (so
 use the `recovery` link above).
 
-### Switch fastapi.mc.org to use the BM boxes  (as soon as the above is done)
+### Switch fastapi.mc.org to use the other cluster boxes  (as soon as the above is done)
 
-* https://manage.fastly.com/
+* [https://manage.fastly.com/](https://manage.fastly.com/)
 * select the `fastapi.metacpan.org` service (click on the `active version`)
 * select `clone` from the `options` menu
 * choose `hosts` and go into each host and update the name and IP from a LW box to a BM box, all other options can be left as they are (click on `update` at bottom of each host page)

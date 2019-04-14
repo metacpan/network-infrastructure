@@ -30,7 +30,7 @@ curl localhost:9200/_cat/health?v
 
 ### Access from your local machine
 
-### Create a ssh tunnel to one of the ES nodes in the cluster
+#### Create a ssh tunnel to one of the ES nodes in the cluster
 ```sh
 ssh -L 9202:localhost:9200 lw-mc-01.metacpan.org
 ```
@@ -39,8 +39,10 @@ Then
 curl localhost:9202/
 ```
 
-### Visual status of the cluster (after setting up the ssh tunnel)
+### Visual status of the cluster 
 
-http://localhost:9202/_plugin/kopf/#!/cluster
+Set up an SSH tunnel (see above) then:
+
+[http://localhost:9202/_plugin/kopf/#!/cluster](http://localhost:9202/_plugin/kopf/#!/cluster)
 
 
