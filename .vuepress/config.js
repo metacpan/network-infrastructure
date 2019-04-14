@@ -10,10 +10,10 @@ module.exports = {
     editLinks: true,
     repo: 'metacpan/network-infrastructure',
       nav: [
+        { text: "Playbooks", link: "/playbooks/" },
         { text: "Sites", link: "/sites/" },
         { text: "Docker", link: "/docker/" },
         { text: "Servers", link: "/servers/" },
-        { text: "Playbooks", link: "/playbooks/" }
       ]
     },
     head: [
