@@ -21,6 +21,6 @@
   "devDependencies": {
     "@vuepress/plugin-last-updated": "^1.0.0-alpha.47",
     "@vuepress/plugin-search": "^1.0.0-alpha.47",
-    "vuepress": "^1.0.0-alpha.47"
+    "vuepress": "^1.1.0"
   }
 }
