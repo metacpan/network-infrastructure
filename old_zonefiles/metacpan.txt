@@ -1,0 +1,88 @@
+$ORIGIN metacpan.org.
+@                      3600 SOA   ns1.p24.dynect.net. (
+                              hostmaster.metacpan.org.   ; address of responsible party
+                              2019031300                 ; serial number
+                              3600                       ; refresh period
+                              600                        ; retry period
+                              604800                     ; expire time
+                              60                       ) ; minimum ttl
+                      86400 NS    ns1.p24.dynect.net.
+                      86400 NS    ns2.p24.dynect.net.
+                      86400 NS    ns3.p24.dynect.net.
+                      86400 NS    ns4.p24.dynect.net.
+                      43200 MX    20 in2-smtp.messagingengine.com.
+                      43200 MX    10 in1-smtp.messagingengine.com.
+                      43200 A     151.101.130.217
+                      43200 A     151.101.194.217
+                      43200 A     151.101.2.217
+                      43200 A     151.101.66.217
+                      43200 AAAA  2a04:4e42:200::729
+                      43200 AAAA  2a04:4e42:400::729
+                      43200 AAAA  2a04:4e42:600::729
+                      43200 AAAA  2a04:4e42::729
+                       3600 TXT   "_globalsign-domain-verification=mVYWxIl-2ab_B1yPPFxEmDCLrBcl6ucouXJOU_P0_C"
+                       3600 TXT   "google-site-verification=RaOtYXpRIzBroICq4P2_prM13j4MJUFITHAv7JAFouU"
+                       3600 TXT   "v=spf1 include:spf.messagingengine.com ?all"
+84E3AFAF2C55667F9FB7BC007B5AEB1B       30 CNAME 11B0903B42A012432C01E6F7785C30CD1E81C53D.comodoca.com.
+_github-challenge-metacpan     3600 TXT   "6ebc7d15bf"
+api                   43200 CNAME dualstack.osff.map.fastly.net.
+api-v1                   30 CNAME dualstack.osff.map.fastly.net.
+backpan               43200 CNAME cpan.metacpan.org.
+bm-mc-04              43200 A     89.16.178.21
+bm-mc-04                300 AAAA  2001:41c8:0:861::21
+clientinfo            43200 CNAME dualstack.osff.map.fastly.net.
+cpan                  43200 CNAME dualstack.osff.map.fastly.net.
+explorer                300 CNAME dualstack.osff.map.fastly.net.
+fastapi               43200 CNAME dualstack.osff.map.fastly.net.
+fastapi-stage          3600 CNAME dualstack.osff.map.fastly.net.
+gh                      300 CNAME dualstack.osff.map.fastly.net.
+grep                  43200 CNAME dualstack.osff.map.fastly.net.
+hound                  3600 CNAME dualstack.osff.map.fastly.net.
+munin                  3600 CNAME prod.nonssl.global.fastly.net.
+p6indexes              3600 CNAME dualstack.osff.map.fastly.net.
+pad                     300 CNAME monken.github.com.
+sco                     300 CNAME dualstack.osff.map.fastly.net.
+v1                      300 CNAME dualstack.osff.map.fastly.net.
+vmbox                   300 CNAME bm-mc-01.metacpan.org.
+web-stage              3600 CNAME dualstack.osff.map.fastly.net.
+www                   43200 CNAME dualstack.osff.map.fastly.net.
+
+$ORIGIN _domainkey.metacpan.org.
+fm1                    3600 CNAME fm1.metacpan.org.dkim.fmhosted.com.
+fm2                    3600 CNAME fm2.metacpan.org.dkim.fmhosted.com.
+fm3                    3600 CNAME fm3.metacpan.org.dkim.fmhosted.com.
+$ORIGIN bm-mc-01.metacpan.org.
+@                     43200 A     5.153.225.19
+*                       300 CNAME bm-mc-01.metacpan.org.
+$ORIGIN bm-mc-02.metacpan.org.
+@                     43200 A     5.153.225.20
+*                       300 CNAME bm-mc-02.metacpan.org.
+$ORIGIN bm-mc-03.metacpan.org.
+@                     43200 A     46.43.35.68
+*                       300 CNAME bm-mc-03.metacpan.org.
+$ORIGIN contest.metacpan.org.
+@                      3600 CNAME metacpan.org.
+entries                3600 CNAME ghs.google.com.
+$ORIGIN lo.metacpan.org.
+@                      3600 A     127.0.3.3
+*                      3600 A     127.0.4.4
+$ORIGIN lw-mc-01.metacpan.org.
+@                       300 A     50.28.18.102
+*                       300 CNAME lw-mc-01.metacpan.org.
+$ORIGIN lw-mc-02.metacpan.org.
+@                       300 A     50.28.18.103
+*                       300 CNAME lw-mc-02.metacpan.org.
+$ORIGIN lw-mc-03.metacpan.org.
+@                       300 A     50.28.18.168
+*                       300 CNAME lw-mc-03.metacpan.org.
+$ORIGIN mo-n1.metacpan.org.
+@                     86400 A     176.9.148.50
+*                     86400 A     176.9.148.50
+$ORIGIN sysmail.metacpan.org.
+@                     43200 MX    20 mxb.mailgun.org.
+                      43200 MX    10 mxa.mailgun.org.
+                       3600 TXT   "v=spf1 include:mailgun.org ~all"
+email                  3600 CNAME mailgun.org.
+
+$ORIGIN _domainkey.sysmail.metacpan.org.
+mailo                  3600 TXT   "k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDpdPhpenIfWPQKDz5lbojO+aNlkuHHGqWvMy72xac+1Ir8cHaWNcWeUQBv6pSTTKUdDFqm6rgo2hBS0JSU/1caKQ1uX5si71EWZLC62Gc8AuCvsavSkw+Zu9aLoGqZnXs9ihUNMJyW+mEuXIzhgJkKtl7sm2Q2v8njTaHBQ2AuIwIDAQAB"
