@@ -20,7 +20,7 @@
   "homepage": "https://github.com/metacpan/network-infrastructure#readme",
   "devDependencies": {
     "@vuepress/plugin-last-updated": "^1.7.0",
-    "@vuepress/plugin-search": "^1.7.0",
+    "@vuepress/plugin-search": "^1.7.1",
     "vuepress": "^1.7.1"
   }
 }
