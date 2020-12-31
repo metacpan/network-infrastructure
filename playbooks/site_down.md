@@ -1,6 +1,6 @@
 # What to do if the site is down.
 
-#### Notes:
+## Notes:
 
 * LW = Liquid web data center 
 * BM = Bytemark data center (2019-04-14: current primary for Elasticsearch and therefore the API )
@@ -30,13 +30,13 @@ Can we reach the bytemark web servers (if they are the master Data Center, other
 
 ### Unreachable?
 
-* If none of the production boxes is reachable we need to consider auctioning our disaster recovery plan.
+* If none of the production boxes is reachable we need to consider actioning our disaster recovery plan.
 
-## Disaster recovery Plan (option of LAST resort)
+## Disaster Recovery Plan (option of LAST resort)
 
 * Restore ES snapshot (snapshots taken daily)
 
-### Find the snapshot on any the non-main production cluster machine
+### Find the snapshot on any the non-main production cluster machines
 ```sh
 ./bin/run bin/metacpan snapshot --list
 ```
@@ -46,20 +46,21 @@ Can we reach the bytemark web servers (if they are the master Data Center, other
 ./bin/run bin/metacpan snapshot --setup
 ```
 
-### initiate restores (change date to in lines below)
+### Initiate restores (change date in lines below)
 ```sh
 ./bin/run bin/metacpan snapshot --restore --snap-name user_YYYY-MM-DD
 ./bin/run bin/metacpan snapshot --restore --snap-name cpan_YYYY-MM-DD
 ```
 
 ### Monitor restore
-Restore works like a ES recovery... so you can monitor it as:
+Restore works like an ES recovery, so you can monitor it as:
+
 ```sh
- curl localhost:9200/_cat/recovery?v
- ```
+curl localhost:9200/_cat/recovery?v
+```
 
 This takes about an hour before it's actually accessible and longer for it to
-be green, after the 1st shard you can see progress in kopf, but not before (so
+be green. After the 1st shard you can see progress in kopf, but not before (so
 use the `recovery` link above).
 
 ### Switch fastapi.mc.org to use the other cluster boxes  (as soon as the above is done)
@@ -71,7 +72,7 @@ use the `recovery` link above).
 * click `activate` button to deploy
 * monitor traffic in the `/var/log/nginx/metacpan-api/access.log` on the BM servers
 
-Might as well get Fastly switched over as soon as the ES recovery is started
+Might as well get Fastly switched over as soon as the ES recovery has started.
 
 ### Web front end (nothing to do)
 
