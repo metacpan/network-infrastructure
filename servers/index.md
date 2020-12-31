@@ -11,7 +11,7 @@ bm-mc-02 | 32GB | 8 core AMD Opteron(tm) Processor 3380 | 1TB SATA, 250 SSD
 bm-mc-03 | 32GB | 4 core Intel(R) Xeon(R) CPU E5504  @ 2.00GHz | 542 GB
 bm-mc-04 | 32GB | 8 core AMD Opteron(tm) Processor 3380 | 1TB SATA, 250 SSD
 
-### Liquid Web 
+### Liquid Web
 
 Name | RAM | CPU | Disk
 -----|-----|-----|-----
@@ -27,13 +27,13 @@ is hosted where.
 
 ### How to format filesystem for metacpan.org/tmp folder
 
-That folder contains the unpacked tarballs and as such consists of millions of small files. We will run faster out of inodes than disk space. When formatting that filesystem, ensure that inode-size = block-size:
+That folder contains the unpacked tarballs and as such consists of millions of small files. We will run out of inodes faster than disk space. When formatting that filesystem, ensure that inode-size = block-size:
 
     mkfs.ext4 -i 4096 /dev/mapper/$lv # assuming block size of that volume is 4k
 
-### How to increase storage space for ElasticSearch and the CPAN mirror?
+### How to increase storage space for Elasticsearch and the CPAN mirror?
 
-The CPAN mirror and the ElasticSearch data are stored in `/var/cpan` and `/var/elasticsearch`, respectively. Those are filesystems on top of the LVM LVs `/dev/mapper/vg0-cpan` and `/dev/mapper/vg0-elasticsearch`.
+The CPAN mirror and the Elasticsearch data are stored in `/var/cpan` and `/var/elasticsearch`, respectively. Those are filesystems on top of the LVM LVs `/dev/mapper/vg0-cpan` and `/dev/mapper/vg0-elasticsearch`.
 
 To increase the space available on one of them, change the following example, which adds an additional 100 MB for the CPAN mirror. There's no need to unmount anything.
 

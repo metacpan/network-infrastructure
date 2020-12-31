@@ -1,8 +1,8 @@
-# Play Books
+# Playbooks
 
 ## Site down
 
-Read our [Site down documentation](./site_down.md) 
+Read our [Site down documentation](./site_down.md)
 
 ## Monitoring
 
@@ -13,7 +13,7 @@ Read our [Site down documentation](./site_down.md)
 - [https://www.panopta.com/](https://www.panopta.com/) (they give us a free account and we run their agent on our servers)
 
 
-## Elastic Search
+## Elasticsearch
 
 ### Quick check of status
 From one of the production ES boxes
@@ -30,7 +30,7 @@ curl localhost:9200/_cat/health?v
 
 ### Access from your local machine
 
-#### Create a ssh tunnel to one of the ES nodes in the cluster
+#### Create an ssh tunnel to one of the ES nodes in the cluster
 ```sh
 ssh -L 9202:localhost:9200 lw-mc-01.metacpan.org
 ```
@@ -39,7 +39,7 @@ Then
 curl localhost:9202/
 ```
 
-### Visual status of the cluster 
+### Visual status of the cluster
 
 Set up an SSH tunnel (see above) then:
 

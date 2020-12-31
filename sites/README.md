@@ -17,7 +17,7 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 
 [http://fastapi.metacpan.org/](http://fastapi.metacpan.org/)
 
- * load balanced + health checks: bm-mc-01, bm-mc-02, bm-mc-04  (as need to talk to same ElasticSearch always)
+ * load balanced + health checks: bm-mc-01, bm-mc-02, bm-mc-04  (as need to talk to same Elasticsearch always)
 
 ### Other sites
 
@@ -35,11 +35,11 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 
 [https://v1.metacpan.org/](https://v1.metacpan.org/)
 
- * Entirly on fastly, no origin - it just redirects
+ * Entirely on fastly, no origin - it just redirects
 
 [http://www.metacpan.org/](http://www.metacpan.org/), [https://www.metacpan.org/](https://www.metacpan.org/) - redirect to [https://metacpan.org/](https://metacpan.org/)
 
- * Entirly on fastly, no origin
+ * Entirely on fastly, no origin
 
 [http://api.metacpan.org/](http://api.metacpan.org/) - v0 of the API
 
