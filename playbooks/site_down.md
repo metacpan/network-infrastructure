@@ -16,7 +16,7 @@ Also see #metacpan on irc.perl.org as [https://www.panopta.com/](https://www.pan
 Can we reach the bytemark web servers (if they are the master Data Center, otherwise Liquid web on: lw-mc-01 lw-mc-02 lw-mc-03):
 
 * `ssh bm-mc-01.metacpan.org`  ( or bm-mc-02 / bm-mc-04 )
-* Is elasticsearch ok? `curl localhost:9200/_cat/health`  - should say `green` (if not see [elasticsearch.md](elasticsearch.md) in this repo for further debugging)
+* Is elasticsearch ok? `curl localhost:9200/_cat/health`  - should say `green` (if not see [README.md](README.md#Elasticsearch) in this repo for further debugging)
 * Check the following are running:
  ```sh
   sudo systemctl status starman_metacpan-api
