@@ -6,6 +6,7 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 
 - LW = Liquid web data center
 - BM = Bytemark data center ( primary for Elasticsearch and therefore the API )
+- DOk8 = Digital Ocean Kubernetes cluster (3+ nodes)
 
 ## Fastly - CDN
 
@@ -13,7 +14,7 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 
 [https://metacpan.org/](https://metacpan.org/)  ( fastly also take http and converts to httpS )
 
- * load balanced + health checks: Digital Ocean K8s
+ * DOk8
 
 [http://fastapi.metacpan.org/](http://fastapi.metacpan.org/)
 
@@ -43,7 +44,7 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 
 [http://api.metacpan.org/](http://api.metacpan.org/) - v0 of the API
 
-  * Digital Ocean K8s
+  * DOk8
  
 [http://gh.metacpan.org](http://gh.metacpan.org)
  
@@ -51,8 +52,8 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
  
 [http://grep.metacpan.org](http://grep.metacpan.org)
  
-  * Digital Ocean K8s
+  * DOk8
 
 [https://perl5.test-smoke.org/](https://perl5.test-smoke.org/)
 
-  * Digital Ocean K8s
+  * DOk8
