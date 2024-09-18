@@ -13,7 +13,7 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 
 [https://metacpan.org/](https://metacpan.org/)  ( fastly also take http and converts to httpS )
 
- * load balanced + health checks: lw-mc-01, lw-mc-02, bm-mc-01, bm-mc-02
+ * load balanced + health checks: Digital Ocean K8s
 
 [http://fastapi.metacpan.org/](http://fastapi.metacpan.org/)
 
@@ -43,17 +43,16 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 
 [http://api.metacpan.org/](http://api.metacpan.org/) - v0 of the API
 
-  * bm-mc-01 & lw-mc-02 - running the shim
-
-[http://munin.metacpan.org](http://munin.metacpan.org)
-
- * lw-mc-01
+  * Digital Ocean K8s
  
- [http://gh.metacpan.org](http://gh.metacpan.org)
+[http://gh.metacpan.org](http://gh.metacpan.org)
  
  * lw-mc-02
  
- [http://grep.metacpan.org](http://grep.metacpan.org)
+[http://grep.metacpan.org](http://grep.metacpan.org)
  
- * bm-mc-02
+  * Digital Ocean K8s
 
+[https://perl5.test-smoke.org/](https://perl5.test-smoke.org/)
+
+  * Digital Ocean K8s
