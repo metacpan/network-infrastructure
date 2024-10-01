@@ -6,7 +6,6 @@
 
 Name | RAM | CPU | Disk
 -----|-----|-----|-----
-bm-mc-01 | 32GB | 8 core AMD Opteron(tm) Processor 3380  | 1TB SATA, 250 SSD
 bm-mc-02 | 32GB | 8 core AMD Opteron(tm) Processor 3380 | 1TB SATA, 250 SSD
 bm-mc-03 | 32GB | 4 core Intel(R) Xeon(R) CPU E5504  @ 2.00GHz | 542 GB
 bm-mc-04 | 32GB | 8 core AMD Opteron(tm) Processor 3380 | 1TB SATA, 250 SSD

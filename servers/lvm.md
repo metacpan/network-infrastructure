@@ -46,7 +46,7 @@ mkdir /mnt/lv-elasticsearch
 ## You probably want to sync from an existing machine
 ```
 cd /mnt/lv-cpan
-rsync -a -e ssh leo@bm-mc-01.metacpan.org:/mnt/lv-cpan/ ./
+rsync -a -e ssh leo@bm-mc-02.metacpan.org:/mnt/lv-cpan/ ./
 ```
 
 ## Extending space
