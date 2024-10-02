@@ -18,7 +18,7 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 
 [http://fastapi.metacpan.org/](http://fastapi.metacpan.org/)
 
- * load balanced + health checks: bm-mc-01, bm-mc-02, bm-mc-04  (as need to talk to same Elasticsearch always)
+ * load balanced + health checks: bm-mc-02, bm-mc-04  (as need to talk to same Elasticsearch always)
 
 ### Other sites
 
@@ -45,13 +45,13 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 [http://api.metacpan.org/](http://api.metacpan.org/) - v0 of the API
 
   * DOk8
- 
+
 [http://gh.metacpan.org](http://gh.metacpan.org)
- 
+
  * lw-mc-02
- 
+
 [http://grep.metacpan.org](http://grep.metacpan.org)
- 
+
   * DOk8
 
 [https://perl5.test-smoke.org/](https://perl5.test-smoke.org/)
