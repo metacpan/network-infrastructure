@@ -17,7 +17,7 @@ This site is automatically built when changes are
 merged to the `master` branch on [GitHub](https://github.com/metacpan/network-infrastructure).
 
 Until we set up our own domain, this site can be found at
-[https://flamboyant-galileo-0b7d87.netlify.com/](https://flamboyant-galileo-0b7d87.netlify.com/)
+[https://inquisitive-yeot-0bf7d4.netlify.app/](https://inquisitive-yeot-0bf7d4.netlify.app/)
 
 ### Running locally
 
