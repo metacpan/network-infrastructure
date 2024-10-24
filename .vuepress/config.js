@@ -1,8 +1,9 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
+import { env } from 'node:process';
 
-export default defineUserConfig({
+const options = {
   title: "MetaCPAN infra",
   description: "MetaCPAN infrastructure and networking",
   bundler: viteBundler(),
@@ -32,7 +33,10 @@ export default defineUserConfig({
   //     }
   //   ]
   ]
-})
-
-export {
 };
+
+if (env.GITHUB_PAGES_BASE) {
+  options.base = env.GITHUB_PAGES_BASE.replace(/^\/?/, '/').replace(/\/?$/, '/');
+}
+
+export default defineUserConfig(options);
