@@ -36,7 +36,7 @@ const options = {
 };
 
 if (env.GITHUB_PAGES_BASE) {
-  options.base = env.GITHUB_PAGES_BASE.replace(/^\/?/, '/').replace(/\/?$/, '/');
+  options.base = env.GITHUB_PAGES_BASE.replace(/\/?$/, '/');
 }
 
 export default defineUserConfig(options);
