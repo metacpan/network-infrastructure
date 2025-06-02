@@ -3,5 +3,10 @@ updates:
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
   open-pull-requests-limit: 10
+  groups:
+    versions:
+      applies-to: version-updates
+    security:
+      applies-to: security-updates
