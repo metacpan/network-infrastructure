@@ -24,7 +24,7 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 
 [http://search.cpan.org/](http://search.cpan.org/), [http://search.mcpan.org/](http://search.mcpan.org/), [http://mcpan.org/](http://mcpan.org/) && [http://sco.metacpan.org/](http://sco.metacpan.org/) - redirects
 
- * load balanced (heavily to LW) + health checks: lw-mc-01, lw-mc-02, lw-mc-03, bm-mc-02, bm-mc-04
+ * DOk8
 
 [https://cpan.metacpan.org/](https://cpan.metacpan.org/) && [https://backpan.metacpan.org/](https://backpan.metacpan.org/) - and _http_
 
@@ -38,17 +38,13 @@ Domains and their configuration / origin(s). This documents the MetaCPAN domains
 
  * Entirely on fastly, no origin - it just redirects
 
-[http://www.metacpan.org/](http://www.metacpan.org/), [https://www.metacpan.org/](https://www.metacpan.org/) - redirect to [https://metacpan.org/](https://metacpan.org/)
+[http://www.metacpan.org/](http://www.metacpan.org/), [https://www.metacpan.org/](https://www.metacpan.org/) - redirect  
 
  * Entirely on fastly, no origin
 
-[http://api.metacpan.org/](http://api.metacpan.org/) - v0 of the API
+[http://api.metacpan.org/](http://api.metacpan.org/) - v0 of the API (aka api-v0-shim)
 
   * DOk8
-
-[http://gh.metacpan.org](http://gh.metacpan.org)
-
- * lw-mc-02
 
 [http://grep.metacpan.org](http://grep.metacpan.org)
 
