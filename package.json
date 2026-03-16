@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/metacpan/network-infrastructure#readme",
   "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.26",
+    "@vuepress/bundler-vite": "^2.0.0-rc.27",
     "@vuepress/plugin-search": "^2.0.0-rc.125",
     "@vuepress/theme-default": "^2.0.0-rc.125",
     "sass-embedded": "^1.98.0",
