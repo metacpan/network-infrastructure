@@ -1,0 +1,24 @@
+/* assets/layout.css — sidebar layout on top of Pico */
+.topnav { border-bottom: 1px solid var(--pico-muted-border-color); }
+.layout {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.layout aside { position: sticky; top: 1rem; }
+.toc ul { list-style: none; padding-left: 0; font-size: 0.9rem; }
+.toc .lvl-3 { padding-left: 1rem; }
+.toc .lvl-4 { padding-left: 2rem; }
+.toc a { text-decoration: none; }
+.page-meta {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: var(--pico-muted-color);
+  border-top: 1px solid var(--pico-muted-border-color);
+  padding-top: 1rem;
+}
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; }
+  .layout aside { position: static; }
+}
