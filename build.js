@@ -45,12 +45,8 @@ function gitLastUpdated(srcPath) {
 }
 
 function metaHtml(srcPath) {
-  const updated = gitLastUpdated(srcPath);
   const editUrl = `https://github.com/${REPO}/edit/master/${srcPath}`;
-  const parts = [];
-  if (updated) parts.push(`Last updated: ${updated}`);
-  parts.push(`<a href="${editUrl}">Edit this page on GitHub</a>`);
-  return parts.join(' · ');
+  return `<a href="${editUrl}">Edit this page on GitHub</a>`;
 }
 
 function heroHtml(data, base) {
@@ -79,6 +75,7 @@ function build() {
       navItems: NAV_ITEMS,
       toc,
       content,
+      updated: gitLastUpdated(srcPath),
       meta: metaHtml(srcPath),
       home,
     });

@@ -31,3 +31,26 @@ test('home page renders no toc sidebar', () => {
   });
   assert.doesNotMatch(html, /<a href="#/);
 });
+
+const page = (overrides) => renderPage({
+  title: 'X', base: '', navItems, toc: [], content: '<h1>Title</h1><p>body</p>', meta: '', home: false, ...overrides,
+});
+
+test('last-updated date sits directly under the page title', () => {
+  const html = page({ updated: '2026-06-16' });
+  assert.match(html, /<\/h1><p class="page-updated">Last updated: 2026-06-16<\/p><p>body<\/p>/);
+});
+
+test('last-updated date leads the article when a page has no title', () => {
+  const html = page({ updated: '2026-06-16', content: '<p>body</p>' });
+  assert.match(html, /<p class="page-updated">Last updated: 2026-06-16<\/p><p>body<\/p>/);
+});
+
+test('no last-updated line without a date', () => {
+  assert.doesNotMatch(page({ updated: '' }), /page-updated/);
+});
+
+test('contents list is a closed native disclosure', () => {
+  const html = page({ toc: [{ level: 2, text: 'Alpha', slug: 'alpha' }] });
+  assert.match(html, /<details class="toc"><summary>On this page<\/summary><ul>.*Alpha.*<\/ul><\/details>/);
+});
