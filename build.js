@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, readdirSync, st
 import { execFileSync } from 'node:child_process';
 import { dirname, join } from 'node:path';
 import { parseFrontmatter } from './lib/frontmatter.js';
-import { srcToOutputPath, withBase } from './lib/paths.js';
+import { isSitePage, srcToOutputPath, withBase } from './lib/paths.js';
 import { renderMarkdown } from './lib/markdown.js';
 import { renderPage } from './lib/template.js';
 
@@ -27,7 +27,7 @@ function findMarkdown(dir = '.', acc = []) {
     if (entry.isDirectory()) {
       if (SKIP_DIRS.has(rel) || rel.startsWith('.')) continue;
       findMarkdown(rel, acc);
-    } else if (entry.name.endsWith('.md')) {
+    } else if (isSitePage(rel)) {
       acc.push(rel);
     }
   }

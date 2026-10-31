@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { srcToUrl, srcToOutputPath, withBase } from '../lib/paths.js';
+import { srcToUrl, srcToOutputPath, withBase, isSitePage } from '../lib/paths.js';
 
 test('srcToUrl maps README and index to directory roots', () => {
   assert.equal(srcToUrl('README.md'), '/');
@@ -23,4 +23,12 @@ test('withBase joins base prefix without doubling slashes', () => {
   assert.equal(withBase('/playbooks/', ''), '/playbooks/');
   assert.equal(withBase('/playbooks/', '/network-infrastructure/'), '/network-infrastructure/playbooks/');
   assert.equal(withBase('/', '/network-infrastructure/'), '/network-infrastructure/');
+});
+
+test('isSitePage accepts markdown content and rejects root design records', () => {
+  assert.equal(isSitePage('README.md'), true);
+  assert.equal(isSitePage('servers/lvm.md'), true);
+  assert.equal(isSitePage('PRODUCT.md'), false);
+  assert.equal(isSitePage('DESIGN.md'), false);
+  assert.equal(isSitePage('servers/notes.txt'), false);
 });
