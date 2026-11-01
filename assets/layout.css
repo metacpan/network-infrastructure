@@ -1,0 +1,71 @@
+/* assets/layout.css — sidebar layout on top of Pico */
+.topnav { border-bottom: 1px solid var(--pico-muted-border-color); }
+.topnav strong { white-space: nowrap; }
+.layout {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+/* Without min-width: 0, wide code blocks stretch the column past the screen. */
+.layout > * { min-width: 0; }
+.layout aside {
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+.toc ul { list-style: none; padding-left: 0; font-size: 0.9rem; }
+.toc li { list-style: none; }
+.toc .lvl-3 { padding-left: 1rem; }
+.toc .lvl-4 { padding-left: 2rem; }
+.toc a { text-decoration: none; }
+/* Always open beside the article; browsers without ::details-content keep the toggle. */
+@supports selector(::details-content) {
+  @media (min-width: 769px) {
+    .toc summary { display: none; }
+    .toc::details-content { display: block; content-visibility: visible; }
+  }
+}
+
+/* Commands are what the reader came for, so they outrank prose. */
+pre, code, kbd { --pico-code-color: var(--pico-h1-color); }
+pre { border: 1px solid var(--pico-muted-border-color); }
+pre code { font-size: 0.95rem; }
+/* Code blocks scroll sideways; inline paths have to wrap on a narrow screen. */
+:not(pre) > code { overflow-wrap: anywhere; }
+
+article :is(p, ul, ol) { max-width: 70ch; }
+article h2 {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--pico-muted-border-color);
+  font-size: 1.5rem;
+}
+article h3 {
+  margin-top: 1.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+article h3 code { font-size: 0.95em; }
+
+.page-updated {
+  margin-top: -0.5rem;
+  font-size: 0.9rem;
+  color: var(--pico-muted-color);
+}
+.page-meta {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: var(--pico-muted-color);
+  border-top: 1px solid var(--pico-muted-border-color);
+  padding-top: 1rem;
+}
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; gap: 0; }
+  .layout aside { position: static; max-height: none; overflow-y: visible; }
+  .topnav { flex-wrap: wrap; }
+  .topnav li { padding-block: 0.25rem; }
+  .toc summary { padding-block: 0.75rem; }
+}

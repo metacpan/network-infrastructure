@@ -2,11 +2,12 @@
   "name": "network-infrastructure",
   "version": "1.0.0",
   "description": "Docs for Docker and other metacpan infrastructure",
-  "main": "index.js",
+  "type": "module",
+  "main": "build.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vuepress dev --host 127.0.0.1",
-    "docs:build": "vuepress build"
+    "test": "node --test",
+    "docs:build": "node build.js",
+    "docs:dev": "node build.js && python3 -m http.server --directory dist 8080"
   },
   "repository": {
     "type": "git",
@@ -18,11 +19,7 @@
     "url": "https://github.com/metacpan/network-infrastructure/issues"
   },
   "homepage": "https://github.com/metacpan/network-infrastructure#readme",
-  "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.27",
-    "@vuepress/plugin-search": "^2.0.0-rc.126",
-    "@vuepress/theme-default": "^2.0.0-rc.126",
-    "sass-embedded": "^1.98.0",
-    "vuepress": "^2.0.0-rc.27"
+  "dependencies": {
+    "markdown-it": "^14.1.0"
   }
 }

@@ -1,0 +1,24 @@
+<!-- templates/page.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<link rel="stylesheet" href="{{assetBase}}assets/pico.min.css">
+<link rel="stylesheet" href="{{assetBase}}assets/layout.css">
+</head>
+<body>
+<nav class="container-fluid topnav">
+  <ul><li><strong><a href="{{homeHref}}">MetaCPAN infra</a></strong></li></ul>
+  <ul>{{navbar}}</ul>
+</nav>
+<main class="container layout">
+  <aside>{{sidebar}}</aside>
+  <article>
+    {{content}}
+    <footer class="page-meta">{{meta}}</footer>
+  </article>
+</main>
+</body>
+</html>

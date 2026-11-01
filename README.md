@@ -27,5 +27,5 @@ Viewable on [https://metacpan.github.io/network-infrastructure/](https://metacpa
 
 ```sh
 npm install
-npm run docs:dev
+npm run docs:dev   # builds dist/ and serves at http://127.0.0.1:8080
 ```
